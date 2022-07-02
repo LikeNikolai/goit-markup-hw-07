@@ -1,0 +1,26 @@
+.logo {
+  color: $active-color;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &__header {
+    margin-right: 90px;
+    text-shadow: 0px 4px 4px #00000040;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &__header_deco {
+    color: $maintext-color;
+  }
+
+  &__footer {
+    line-height: 1.19;
+  }
+
+  &__footer_deco {
+    color: $background-color;
+  }
+}
