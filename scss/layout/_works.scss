@@ -2,11 +2,7 @@
   padding-top: 0;
 
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
-    text-align: center;
-    margin-bottom: 50px;
+    @extend %title-one;
   }
 
   &__list {
@@ -14,13 +10,12 @@
   }
 
   &__item:not(:last-child) {
-    width: 370px;
+    @extend %width-works;
     margin-right: 30px;
   }
 
   &__thumb {
     position: relative;
-
     display: flex;
     justify-content: center;
     text-align: center;
@@ -29,19 +24,17 @@
   &__desc {
     position: absolute;
     bottom: 0;
-
-    display: flex;
+    @extend %df-aic;
     justify-content: center;
-    align-items: center;
 
-    background-color: #2f303acc;
-    width: 370px;
+    background-color: $works-descr-color;
+    @extend %width-works;
     height: 70px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $background-color;
   }
 }

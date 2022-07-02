@@ -6,9 +6,8 @@
   height: 100%;
   background-color: #00000033;
   opacity: 1;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition-common(opacity);
+  @include transition-common(visibility);
 }
 
 .backdrop.is-hidden {
@@ -18,7 +17,7 @@
 }
 
 .modal__window {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition-common(transform);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -51,7 +50,8 @@
 
 .close__button {
   fill: #000000;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transition-common(fill);
 
   .modal__close:hover & {
     fill: #2196f3;
@@ -103,7 +103,8 @@
   height: 40px;
   padding-left: 40px;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition-common(border-color);
+
   &:focus-within {
     border-color: #188ce8;
   }
@@ -119,7 +120,8 @@
   top: 65%;
   transform: translateY(-50%);
   fill: #212121;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transition-common(fill);
 
   .form__item:focus-within & {
     fill: #188ce8;
@@ -132,7 +134,8 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transition-common(border-color);
 
   &:focus-within {
     border-color: #188ce8;
@@ -155,15 +158,13 @@
   text-align: center;
 
   &__input {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-  outline: none;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    outline: none;
+  }
 }
-}
-
-
 
 .form__checkbox__label {
   position: relative;
@@ -188,9 +189,10 @@
     outline: transparent;
     fill: transparent;
     transform: translateX(-20px);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include transition-common(border-color);
+    @include transition-common(background-color);
+    @include transition-common(border-color);
   }
 
   &:hover::before,
@@ -223,7 +225,8 @@
   border-color: #188ce8;
   box-shadow: 0px 4px 4px 0px #00000025;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition-common(background-color);
+
   &:focus,
   &:hover {
     background-color: #188ce8;

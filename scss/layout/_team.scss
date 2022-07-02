@@ -1,11 +1,7 @@
 .team {
   background-color: $teams-background-color;
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
-    text-align: center;
-    margin-bottom: 50px;
+    @extend %title-one;
   }
 
   &__list {
@@ -40,7 +36,7 @@
   }
 
   &__job {
-    color: var(--additionaltext-color);
+    color: $additionaltext-color;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
@@ -50,17 +46,15 @@
   &__link {
     width: 44px;
     height: 44px;
-    display: flex;
-    align-items: center;
+    @extend %df-aic;
     justify-content: center;
     border-radius: 50%;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition-common(background-color);
   }
 
   &__svg {
     fill: #afb1b8;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition-common(fill);
   }
 
   &__contact:hover &__svg,
@@ -79,8 +73,7 @@
   }
 
   &__contacts {
-    display: flex;
-    align-items: center;
+    @extend %df-aic;
     justify-content: center;
   }
 
@@ -88,9 +81,9 @@
     border-radius: 50%;
     margin-left: 10px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition-common(color);
+    @include transition-common(box-shadow);
+    @include transition-common(background-color);
   }
 
   &__contact:first-child {
