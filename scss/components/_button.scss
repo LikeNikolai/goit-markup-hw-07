@@ -1,6 +1,6 @@
 .button {
   color: $background-color;
-  font-family: "Roboto", sans-serif;
+  @extend %ff-roboto-ss;
   background-color: $active-color;
   cursor: pointer;
   font-size: 16px;

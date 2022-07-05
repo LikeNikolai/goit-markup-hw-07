@@ -1,11 +1,10 @@
-@import "./base/reset";
 @import "./utils/vars";
+@import "./base/reset";
 @import "./utils/placeholders";
 @import "./utils/mixins";
+@import "./utils/hidden";
 
 @import "./base/common";
-
-@import "./utils/hidden";
 
 @import "./components/components";
 

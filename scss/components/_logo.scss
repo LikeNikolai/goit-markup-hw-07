@@ -1,6 +1,6 @@
 .logo {
   color: $active-color;
-  font-family: "Raleway";
+  @extend %ff-raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
